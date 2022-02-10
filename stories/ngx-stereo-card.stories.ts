@@ -2,6 +2,7 @@ import { moduleMetadata, storiesOf } from '@storybook/angular';
 import { Story } from '@storybook/angular/types-6-0';
 import { NgxStereoCardComponent } from '../projects/ngx-stereo-card/src/lib/ngx-stereo-card.component';
 import { CommonModule } from '@angular/common';
+import { url } from 'inspector';
 
 export default {
   title: 'ngx-stereo-card',
@@ -21,6 +22,10 @@ const Template: Story<NgxStereoCardComponent> = () => ({
     intensity: 0.05,
     customStyle: {
       background: '#f7f7f7',
+      fontFamily: '"Arial", sans-serif',
+      padding: '45px',
+      border: '1px solid #ccc',
+      borderRadius: '10px',
     },
   },
   template: `
