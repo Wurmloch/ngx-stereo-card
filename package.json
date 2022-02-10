@@ -8,6 +8,7 @@
     "postbuild": "shx cp README.md ./dist/ngx-stereo-card/README.md",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
+    "test-ci": "ng test --browsers=ChromeHeadless --watch=false --code-coverage",
     "docs:json": "compodoc -p ./tsconfig.json -e json -d .",
     "storybook": "npm run docs:json && start-storybook -p 6006",
     "build-storybook": "npm run docs:json && build-storybook"
