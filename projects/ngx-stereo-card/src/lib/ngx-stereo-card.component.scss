@@ -1,15 +1,26 @@
-.stereo-card {
-  font-family: inherit;
-  .stereo-card-header {
-    .stereo-card-title {
-      font-size: 2em;
-    }
-    .stereo-card-substitle {
-      font-size: 1.2em;
+.stereo-card-wrapper {
+  &:hover {
+    .stereo-card {
+      box-shadow: 0 40px 70px -15px rgba(0, 0, 0, 0.25);
     }
   }
-  .stereo-card-content {
-  }
-  .stereo-card-footer {
+  .stereo-card {
+    font-family: inherit;
+    padding: 40px;
+    border-radius: 5px;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: transform ease 0.2s, box-shadow ease 0.3s;
+    background: inherit;
+    box-shadow: 0 20px 30px -13px rgba(0, 0, 0, 0.35);
+    transform: scale(1);
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    .stereo-card-flex-filler {
+      flex: 1 1 auto;
+    }
   }
 }

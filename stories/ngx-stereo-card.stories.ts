@@ -17,9 +17,27 @@ export default {
 const Template: Story<NgxStereoCardComponent> = () => ({
   component: NgxStereoCardComponent,
   props: {
-    title: 'Default',
-    subtitle: 'This is the default card',
+    width: 400,
+    intensity: 0.05,
+    customStyle: {
+      background: '#f7f7f7',
+    },
   },
-  template: `<ngx-stereo-card [title]="title" [subtitle]="subtitle"></ngx-stereo-card>`,
+  template: `
+  <ngx-stereo-card
+    [width]="width"
+    [intensity]="intensity"
+    [customStyle]="customStyle">
+    <div stereo-card-footer>
+      <a href="#">My Custom Link</a>
+    </div>
+    <div stereo-card-content>
+      <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam</p>
+    </div>
+    <div stereo-card-header>
+      <h2>Default Title</h2>
+      <h4>Subtitle</h4>
+    </div>
+  </ngx-stereo-card>`,
 });
 export const Default = Template.bind({});

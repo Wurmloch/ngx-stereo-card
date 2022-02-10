@@ -9,14 +9,14 @@
     "components": [
         {
             "name": "NgxStereoCardComponent",
-            "id": "component-NgxStereoCardComponent-e64298afcdbd7d2d43d58660df60e55cc9522d68ee10fd53d6f23ae4c9c44c2dab52e06e65283c7971698ff1516d935b59762691567397e24929933211e3abee",
+            "id": "component-NgxStereoCardComponent-525ad53bf8af235280044ee71885d673a79a2b3b7310e64ce9b7510ab4cd55b73512c94489ba8890c47e567cdbb7d2dfc3b321e70114c6aed11f9bd9eebbb887",
             "file": "projects/ngx-stereo-card/src/lib/ngx-stereo-card.component.ts",
             "encapsulation": [],
             "entryComponents": [],
             "inputs": [],
             "outputs": [],
             "providers": [],
-            "selector": "lib-ngx-stereo-card",
+            "selector": "ngx-stereo-card",
             "styleUrls": [
                 "./ngx-stereo-card.component.scss"
             ],
@@ -25,19 +25,277 @@
                 "./ngx-stereo-card.component.html"
             ],
             "viewProviders": [],
-            "inputsClass": [],
-            "outputsClass": [],
-            "propertiesClass": [],
+            "inputsClass": [
+                {
+                    "name": "clickable",
+                    "defaultValue": "true",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 27,
+                    "type": "boolean",
+                    "decorators": []
+                },
+                {
+                    "name": "customStyle",
+                    "defaultValue": "{}",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 29,
+                    "type": "{}",
+                    "decorators": []
+                },
+                {
+                    "name": "expand",
+                    "defaultValue": "true",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 26,
+                    "type": "boolean",
+                    "decorators": []
+                },
+                {
+                    "name": "height",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 21,
+                    "type": "number",
+                    "decorators": []
+                },
+                {
+                    "name": "intensity",
+                    "defaultValue": "0.1",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 24,
+                    "type": "number",
+                    "decorators": []
+                },
+                {
+                    "name": "perspective",
+                    "defaultValue": "500",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 22,
+                    "type": "number",
+                    "decorators": []
+                },
+                {
+                    "name": "towardsMouse",
+                    "defaultValue": "false",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 25,
+                    "type": "boolean",
+                    "decorators": []
+                },
+                {
+                    "name": "width",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 20,
+                    "type": "number",
+                    "decorators": []
+                }
+            ],
+            "outputsClass": [
+                {
+                    "name": "cardClicked",
+                    "defaultValue": "new EventEmitter<MouseEvent>()",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 31,
+                    "type": "EventEmitter<MouseEvent>"
+                }
+            ],
+            "propertiesClass": [
+                {
+                    "name": "cardWrapper",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "ElementRef<HTMLElement>",
+                    "optional": false,
+                    "description": "",
+                    "line": 17,
+                    "decorators": [
+                        {
+                            "name": "ViewChild",
+                            "stringifiedArguments": "'cardWrapper'"
+                        }
+                    ]
+                },
+                {
+                    "name": "stereoCard",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "ElementRef<HTMLElement>",
+                    "optional": false,
+                    "description": "",
+                    "line": 18,
+                    "decorators": [
+                        {
+                            "name": "ViewChild",
+                            "stringifiedArguments": "'stereoCard'"
+                        }
+                    ]
+                }
+            ],
             "methodsClass": [
                 {
-                    "name": "ngOnInit",
+                    "name": "onClick",
+                    "args": [
+                        {
+                            "name": "event",
+                            "type": "MouseEvent",
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        }
+                    ],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 52,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "jsdoctags": [
+                        {
+                            "name": "event",
+                            "type": "MouseEvent",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "onMouseLeave",
                     "args": [],
                     "optional": false,
                     "returnType": "void",
                     "typeParameters": [],
-                    "line": 11,
+                    "line": 48,
                     "deprecated": false,
                     "deprecationMessage": ""
+                },
+                {
+                    "name": "onMouseMove",
+                    "args": [
+                        {
+                            "name": "event",
+                            "type": "MouseEvent",
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        }
+                    ],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 36,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "jsdoctags": [
+                        {
+                            "name": "event",
+                            "type": "MouseEvent",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "resetRotation",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 73,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "modifierKind": [
+                        121
+                    ]
+                },
+                {
+                    "name": "setRotation",
+                    "args": [
+                        {
+                            "name": "xDeg",
+                            "type": "number",
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        },
+                        {
+                            "name": "yDeg",
+                            "type": "number",
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        }
+                    ],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 63,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "rawdescription": "\n\nset the card rotation\n",
+                    "description": "<p>set the card rotation</p>\n",
+                    "modifierKind": [
+                        121
+                    ],
+                    "jsdoctags": [
+                        {
+                            "name": {
+                                "pos": 1426,
+                                "end": 1430,
+                                "flags": 4227072,
+                                "modifierFlagsCache": 0,
+                                "transformFlags": 0,
+                                "kind": 79,
+                                "escapedText": "xDeg"
+                            },
+                            "type": "number",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "pos": 1420,
+                                "end": 1425,
+                                "flags": 4227072,
+                                "modifierFlagsCache": 0,
+                                "transformFlags": 0,
+                                "kind": 79,
+                                "escapedText": "param"
+                            },
+                            "comment": "<ul>\n<li>the rotation on the x axis in degree</li>\n</ul>\n"
+                        },
+                        {
+                            "name": {
+                                "pos": 1482,
+                                "end": 1486,
+                                "flags": 4227072,
+                                "modifierFlagsCache": 0,
+                                "transformFlags": 0,
+                                "kind": 79,
+                                "escapedText": "yDeg"
+                            },
+                            "type": "number",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "pos": 1476,
+                                "end": 1481,
+                                "flags": 4227072,
+                                "modifierFlagsCache": 0,
+                                "transformFlags": 0,
+                                "kind": 79,
+                                "escapedText": "param"
+                            },
+                            "comment": "<ul>\n<li>the rotation on the y axis in degree</li>\n</ul>\n"
+                        }
+                    ]
                 }
             ],
             "deprecated": false,
@@ -47,11 +305,11 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component, OnInit } from '@angular/core';\n\n@Component({\n  selector: 'lib-ngx-stereo-card',\n  templateUrl: './ngx-stereo-card.component.html',\n  styleUrls: ['./ngx-stereo-card.component.scss'],\n})\nexport class NgxStereoCardComponent implements OnInit {\n  constructor() {}\n\n  ngOnInit(): void {}\n}\n",
+            "sourceCode": "import {\n  Component,\n  ElementRef,\n  Input,\n  Output,\n  Renderer2,\n  ViewChild,\n  EventEmitter,\n} from '@angular/core';\n\n@Component({\n  selector: 'ngx-stereo-card',\n  templateUrl: './ngx-stereo-card.component.html',\n  styleUrls: ['./ngx-stereo-card.component.scss'],\n})\nexport class NgxStereoCardComponent {\n  @ViewChild('cardWrapper') cardWrapper!: ElementRef<HTMLElement>;\n  @ViewChild('stereoCard') stereoCard!: ElementRef<HTMLElement>;\n\n  @Input() width?: number;\n  @Input() height?: number;\n  @Input() perspective: number = 500;\n\n  @Input() intensity: number = 0.1;\n  @Input() towardsMouse: boolean = false;\n  @Input() expand: boolean = true;\n  @Input() clickable: boolean = true;\n\n  @Input() customStyle = {};\n\n  @Output() cardClicked: EventEmitter<MouseEvent> =\n    new EventEmitter<MouseEvent>();\n\n  constructor(private renderer: Renderer2) {}\n\n  onMouseMove(event: MouseEvent) {\n    const xDeg =\n      (this.towardsMouse ? 1 : -1) *\n      (this.cardWrapper.nativeElement.offsetWidth / 2 - event.offsetX) *\n      this.intensity;\n    const yDeg =\n      (this.towardsMouse ? -1 : 1) *\n      (this.cardWrapper.nativeElement.offsetHeight / 2 - event.offsetY) *\n      this.intensity;\n    this.setRotation(xDeg, yDeg);\n  }\n\n  onMouseLeave() {\n    this.resetRotation();\n  }\n\n  onClick(event: MouseEvent) {\n    if (this.clickable) {\n      this.cardClicked.emit(event);\n    }\n  }\n\n  /**\n   * set the card rotation\n   * @param xDeg - the rotation on the x axis in degree\n   * @param yDeg - the rotation on the y axis in degree\n   */\n  private setRotation(xDeg: number, yDeg: number): void {\n    this.renderer.setStyle(\n      this.stereoCard.nativeElement,\n      'transform',\n      `rotateY(${xDeg}deg) rotateX(${yDeg}deg) ${\n        this.expand ? 'scale(1.1)' : ''\n      }`\n    );\n  }\n\n  private resetRotation(): void {\n    this.renderer.setStyle(\n      this.stereoCard.nativeElement,\n      'transform',\n      'rotateX(0deg) rotateY(0deg) scale(1)'\n    );\n  }\n}\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
-                    "data": ".hi {\r\n  background: red;\r\n}\r\n",
+                    "data": ".stereo-card-wrapper {\r\n  &:hover {\r\n    .stereo-card {\r\n      box-shadow: 0 40px 70px -15px rgba(0, 0, 0, 0.25);\r\n    }\r\n  }\r\n  .stereo-card {\r\n    font-family: inherit;\r\n    padding: 40px;\r\n    border-radius: 5px;\r\n    width: 100%;\r\n    height: 100%;\r\n    transform-style: preserve-3d;\r\n    transition: transform ease 0.2s, box-shadow ease 0.3s;\r\n    background: inherit;\r\n    box-shadow: 0 20px 30px -13px rgba(0, 0, 0, 0.35);\r\n    transform: scale(1);\r\n    box-sizing: border-box;\r\n    display: flex;\r\n    flex-direction: column;\r\n    gap: 10px;\r\n    .stereo-card-flex-filler {\r\n      flex: 1 1 auto;\r\n    }\r\n  }\r\n}\r\n",
                     "styleUrl": "./ngx-stereo-card.component.scss"
                 }
             ],
@@ -61,25 +319,40 @@
                 "description": "",
                 "deprecated": false,
                 "deprecationMessage": "",
-                "args": [],
-                "line": 8
+                "args": [
+                    {
+                        "name": "renderer",
+                        "type": "Renderer2",
+                        "deprecated": false,
+                        "deprecationMessage": ""
+                    }
+                ],
+                "line": 32,
+                "jsdoctags": [
+                    {
+                        "name": "renderer",
+                        "type": "Renderer2",
+                        "deprecated": false,
+                        "deprecationMessage": "",
+                        "tagName": {
+                            "text": "param"
+                        }
+                    }
+                ]
             },
-            "implements": [
-                "OnInit"
-            ],
-            "templateData": "<div>hoi</div>\r\n"
+            "templateData": "<div\r\n  #cardWrapper\r\n  class=\"stereo-card-wrapper\"\r\n  (mousemove)=\"onMouseMove($event)\"\r\n  (mouseleave)=\"onMouseLeave()\"\r\n  (click)=\"onClick($event)\"\r\n  [style]=\"{\r\n    width: width ? width + 'px' : 'auto',\r\n    height: height ? height + 'px' : 'auto',\r\n    perspective: perspective + 'px',\r\n    cursor: clickable ? 'pointer' : 'default'\r\n  }\"\r\n>\r\n  <div #stereoCard class=\"stereo-card\" [ngStyle]=\"customStyle\">\r\n    <div class=\"stereo-card-header\">\r\n      <ng-content select=\"[stereo-card-header]\"></ng-content>\r\n    </div>\r\n    <div class=\"stereo-card-content\">\r\n      <ng-content></ng-content>\r\n      <ng-content select=\"[stereo-card-content]\"></ng-content>\r\n    </div>\r\n    <div class=\"stereo-card-flex-filler\"></div>\r\n    <div class=\"stereo-card-footer\">\r\n      <ng-content select=\"[stereo-card-footer]\"></ng-content>\r\n    </div>\r\n  </div>\r\n</div>\r\n"
         }
     ],
     "modules": [
         {
             "name": "NgxStereoCardModule",
-            "id": "module-NgxStereoCardModule-ca22ef2c21d0a2b6728f7e584f43093719e0c15009e1dd65852e441ae6ccb6599d7cd9f746e24332a25e008698b587e58d76d2b095ad6dd0fa8d7be4f6eaa3ae",
+            "id": "module-NgxStereoCardModule-87c857b296294341fb4dfad28ea69c8964c57d8121aaf8a93d7e2f475664e9420ae0ea698b1ab7a14d1e526c8de52008ff8499cdc83462c99c29f93d63c9b55c",
             "description": "",
             "deprecationMessage": "",
             "deprecated": false,
             "file": "projects/ngx-stereo-card/src/lib/ngx-stereo-card.module.ts",
             "methods": [],
-            "sourceCode": "import { NgModule } from '@angular/core';\nimport { NgxStereoCardComponent } from './ngx-stereo-card.component';\n\n\n\n@NgModule({\n  declarations: [\n    NgxStereoCardComponent\n  ],\n  imports: [\n  ],\n  exports: [\n    NgxStereoCardComponent\n  ]\n})\nexport class NgxStereoCardModule { }\n",
+            "sourceCode": "import { CommonModule } from '@angular/common';\nimport { NgModule } from '@angular/core';\nimport { NgxStereoCardComponent } from './ngx-stereo-card.component';\n\n@NgModule({\n  declarations: [NgxStereoCardComponent],\n  imports: [CommonModule],\n  exports: [NgxStereoCardComponent],\n})\nexport class NgxStereoCardModule {}\n",
             "children": [
                 {
                     "type": "providers",
@@ -129,6 +402,16 @@
                 "defaultValue": "require.context('./', true, /\\.spec\\.ts$/)"
             },
             {
+                "name": "Default",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "stories/ngx-stereo-card.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "Template.bind({})"
+            },
+            {
                 "name": "require",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
@@ -136,6 +419,16 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "literal type"
+            },
+            {
+                "name": "Template",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "stories/ngx-stereo-card.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story<NgxStereoCardComponent>",
+                "defaultValue": "() => ({\r\n  component: NgxStereoCardComponent,\r\n  props: {\r\n    width: 400,\r\n    intensity: 0.05,\r\n    customStyle: {\r\n      background: '#f7f7f7',\r\n    },\r\n  },\r\n  template: `\r\n  <ngx-stereo-card\r\n    [width]=\"width\"\r\n    [intensity]=\"intensity\"\r\n    [customStyle]=\"customStyle\">\r\n    <div stereo-card-footer>\r\n      <a href=\"#\">My Custom Link</a>\r\n    </div>\r\n    <div stereo-card-content>\r\n      <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam</p>\r\n    </div>\r\n    <div stereo-card-header>\r\n      <h2>Default Title</h2>\r\n      <h4>Subtitle</h4>\r\n    </div>\r\n  </ngx-stereo-card>`,\r\n})"
             }
         ],
         "functions": [],
@@ -162,6 +455,28 @@
                     "deprecationMessage": "",
                     "type": "literal type"
                 }
+            ],
+            "stories/ngx-stereo-card.stories.ts": [
+                {
+                    "name": "Default",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "stories/ngx-stereo-card.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "Template",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "stories/ngx-stereo-card.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story<NgxStereoCardComponent>",
+                    "defaultValue": "() => ({\r\n  component: NgxStereoCardComponent,\r\n  props: {\r\n    width: 400,\r\n    intensity: 0.05,\r\n    customStyle: {\r\n      background: '#f7f7f7',\r\n    },\r\n  },\r\n  template: `\r\n  <ngx-stereo-card\r\n    [width]=\"width\"\r\n    [intensity]=\"intensity\"\r\n    [customStyle]=\"customStyle\">\r\n    <div stereo-card-footer>\r\n      <a href=\"#\">My Custom Link</a>\r\n    </div>\r\n    <div stereo-card-content>\r\n      <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam</p>\r\n    </div>\r\n    <div stereo-card-header>\r\n      <h2>Default Title</h2>\r\n      <h4>Subtitle</h4>\r\n    </div>\r\n  </ngx-stereo-card>`,\r\n})"
+                }
             ]
         },
         "groupedFunctions": {},
@@ -170,7 +485,7 @@
     },
     "routes": [],
     "coverage": {
-        "count": 0,
+        "count": 1,
         "status": "low",
         "files": [
             {
@@ -178,8 +493,8 @@
                 "type": "component",
                 "linktype": "component",
                 "name": "NgxStereoCardComponent",
-                "coveragePercent": 0,
-                "coverageCount": "0/3",
+                "coveragePercent": 5,
+                "coverageCount": "1/18",
                 "status": "low"
             },
             {
@@ -198,6 +513,26 @@
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
                 "name": "require",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "stories/ngx-stereo-card.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Default",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "stories/ngx-stereo-card.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Template",
                 "coveragePercent": 0,
                 "coverageCount": "0/1",
                 "status": "low"

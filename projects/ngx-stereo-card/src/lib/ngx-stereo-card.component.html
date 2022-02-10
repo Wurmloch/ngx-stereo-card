@@ -1,8 +1,27 @@
-<div class="stereo-card">
-  <div class="stereo-card-header">
-    <div class="stereo-card-title"></div>
-    <div class="stereo-card-subtitle"></div>
+<div
+  #cardWrapper
+  class="stereo-card-wrapper"
+  (mousemove)="onMouseMove($event)"
+  (mouseleave)="onMouseLeave()"
+  (click)="onClick($event)"
+  [style]="{
+    width: width ? width + 'px' : 'auto',
+    height: height ? height + 'px' : 'auto',
+    perspective: perspective + 'px',
+    cursor: clickable ? 'pointer' : 'default'
+  }"
+>
+  <div #stereoCard class="stereo-card" [ngStyle]="customStyle">
+    <div class="stereo-card-header">
+      <ng-content select="[stereo-card-header]"></ng-content>
+    </div>
+    <div class="stereo-card-content">
+      <ng-content></ng-content>
+      <ng-content select="[stereo-card-content]"></ng-content>
+    </div>
+    <div class="stereo-card-flex-filler"></div>
+    <div class="stereo-card-footer">
+      <ng-content select="[stereo-card-footer]"></ng-content>
+    </div>
   </div>
-  <div class="stereo-card-content"></div>
-  <div class="stereo-card-footer"></div>
 </div>

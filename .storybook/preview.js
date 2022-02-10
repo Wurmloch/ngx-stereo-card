@@ -11,4 +11,12 @@ export const parameters = {
     },
   },
   docs: { inlineStories: true },
-}
+  paddings: {
+    values: [
+      { name: "Small", value: "16px" },
+      { name: "Medium", value: "32px" },
+      { name: "Large", value: "64px" },
+    ],
+    default: "Medium",
+  },
+};
