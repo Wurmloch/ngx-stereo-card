@@ -1,3 +1,5 @@
+[![ngx-stereo-card CI](https://github.com/Wurmloch/ngx-stereo-card/actions/workflows/ci.yml/badge.svg)](https://github.com/Wurmloch/ngx-stereo-card/actions/workflows/ci.yml)
+
 # ngx-stereo-card
 
 `npm i -s ngx-stereo-card`
