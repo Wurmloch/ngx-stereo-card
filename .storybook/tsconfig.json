@@ -1,0 +1,10 @@
+{
+  "extends": "../projects/ngx-stereo-card/tsconfig.lib.json",
+  "compilerOptions": {
+    "types": ["node"],
+    "allowSyntheticDefaultImports": true
+  },
+  "exclude": ["../projects/**/*.spec.ts"],
+  "include": ["../projects/**/*", "../stories/**/*"],
+  "files": ["./typings.d.ts"]
+}
