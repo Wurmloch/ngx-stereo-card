@@ -27,6 +27,7 @@ export class NgxStereoCardComponent {
   @Input() clickable: boolean = true;
 
   @Input() customStyle = {};
+  @Input() customClasses: string | string[] = []
 
   @Output() cardClicked: EventEmitter<MouseEvent> =
     new EventEmitter<MouseEvent>();

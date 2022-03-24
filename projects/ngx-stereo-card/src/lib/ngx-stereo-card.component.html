@@ -11,7 +11,7 @@
     cursor: clickable ? 'pointer' : 'default'
   }"
 >
-  <div #stereoCard class="stereo-card" [ngStyle]="customStyle">
+  <div #stereoCard class="stereo-card" [ngStyle]="customStyle" [ngClass]="customClasses">
     <div class="stereo-card-header">
       <ng-content select="[stereo-card-header]"></ng-content>
     </div>
