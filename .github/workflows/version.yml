@@ -9,10 +9,13 @@ jobs:
     runs-on: ubuntu-latest
     if: "!startsWith(github.event.head_commit.message, '[RELEASE]')"
     steps:
-      - uses: actions/checkout@v2
+      - name: Checkout
+        uses: actions/checkout@v2
         with:
           token: ${{ secrets.PAT }}
-      - run: git config --global user.name 'Wurmloch'
-      - run: git config --global user.email 'dominik@mueteam.de'
-      - run: npm version patch -m "[RELEASE] %s"
-      - run: git push
+      - name: git config
+        run: git config --global user.name 'Wurmloch' && git config --global user.email 'dominik@mueteam.de'
+      - name: Patch Version ⬆️
+        run: npm version patch -m "[RELEASE] %s"
+      - name: Push new Version ✔️
+        run: git push
