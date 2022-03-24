@@ -1,4 +1,5 @@
 [![ngx-stereo-card CI](https://github.com/Wurmloch/ngx-stereo-card/actions/workflows/ci.yml/badge.svg)](https://github.com/Wurmloch/ngx-stereo-card/actions/workflows/ci.yml)
+[![Publish](https://github.com/Wurmloch/ngx-stereo-card/actions/workflows/publish.yml/badge.svg?branch=main)](https://github.com/Wurmloch/ngx-stereo-card/actions/workflows/publish.yml)
 
 # ngx-stereo-card
 
