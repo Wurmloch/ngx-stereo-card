@@ -15,7 +15,10 @@ jobs:
           token: ${{ secrets.PAT }}
       - name: git config
         run: git config --global user.name 'Wurmloch' && git config --global user.email 'dominik@mueteam.de'
-      - name: Patch Version ⬆️
+      - name: Patch Version main ⬆️
         run: npm version patch -m "[RELEASE] %s"
+      - name: Patch Version in Component ⬆️
+        run: npm version patch -m "[RELEASE] %s"
+        working-directory: projects/ngx-stereo-card
       - name: Push new Version ✔️
         run: git push
